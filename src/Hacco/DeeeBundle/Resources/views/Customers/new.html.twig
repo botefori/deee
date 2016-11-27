@@ -1,0 +1,111 @@
+{% extends '::front/front.html.twig' %}
+{% form_theme form _self %}
+
+{% block submit_widget %}
+    <div class="submit_widget btn-submt-form">
+         <button type="submit" class="btn btn-success">Envoyer</button>
+    </div>
+{% endblock%}
+{% block title %}{{parent()}} DevisSetup creation {% endblock %}
+{%block carsl %}
+{%endblock %}
+
+{% block body -%}
+    <div id="wrapper">
+      <div class="container">
+          <div class="row">
+             
+             <div class="col-md-12" id="entetepage" >
+                 <sapn>Besoin d'information de renseignement n'hésitez pas à nous contacter.</span>
+                 <h6>Sarl HACCO entreprise spécialisé en traitement des déchets DEEE professionnels</h6>
+             </div>
+              
+          </div>
+          <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                 {{form_start(form,{'attr':{'class': 'form_verticale','id':'signup'}})}}
+                    <fieldset>
+                        <div class="custome-legend-header">
+                            <h3>Vos ccordonnées - Adresse</h3>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <br>
+                                    <div class="form-group">
+                                     {{form_label(form.contact,"Contact *")}}
+                                     <div class="controls">
+                                     {{form_widget(form.contact)}}
+                                     </div>
+                                    </div>
+                                   <div class="form-group">
+                                    {{form_label(form.address,"Address *")}}
+                                    <div class="controls">
+                                    {{form_widget(form.address)}}
+                                    </div>
+                                   </div>
+                                   <div class="form-group">
+                                    {{form_label(form.company,"Société *")}}
+                                    <div class="controls">
+                                    {{form_widget(form.company)}}
+                                    </div>
+                                   </div>
+                                   
+                                   <div class="form-group">
+                                    {{form_label(form.phone, "Phone *")}}
+                                    <div class="controls">
+                                    {{form_widget(form.phone)}}
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <br>
+                                    <div class="form-group">
+                                     {{form_label(form.postalCode, "Code Postale")}}
+                                     <div class="controls">
+                                     {{form_widget(form.postalCode)}}
+                                     </div>
+                                    </div>
+                                    <div class="form-group">
+                                     {{form_label(form.city, "Ville")}}
+                                     <div class="controls">
+                                     {{form_widget(form.city)}}
+                                     </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                     {{form_label(form.email, "Email")}}
+                                     <div class="controls">
+                                     {{form_widget(form.email)}}
+                                     </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                          {{form_label(form.message, "Message *")}}
+                                          <div class="controls">
+                                          {{form_widget(form.message)}}
+                                          </div>
+                                     </div>        
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                 {{form_end(form)}}
+                </div>
+                <div class="col-md-2"></div>
+          </div>
+          <div class="row" id="pied-page">
+              
+              <div class="col-md-12">
+               <span>Sarl HACCO  - Adresse siège social: 148 </span><span> Avenue Jean-L'olive 93500 Pantin - Siret: 810133157 Ape: 3811 Z</span>
+               <h6>Tel: 0761092487 OU 0665398083 - Mail: hacco.mitry@gmail.com</h6>
+              </div>
+              
+          </div>
+      </div>
+    </div>
+{% endblock %}

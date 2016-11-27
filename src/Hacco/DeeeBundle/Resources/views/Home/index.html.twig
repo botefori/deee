@@ -1,0 +1,67 @@
+{% extends '::front/front.html.twig' %}
+{% block title %}{{parent()}} Accueil {% endblock %}
+{%block carsl %}
+      <div class="carousel fade" data-ride="caroussel" id="featured"> <!-- caroussel star -->
+                <ol class="carousel-indicators"> 
+                </ol> <!-- slider indicator end --> 
+
+                <div class="carousel-inner fullheight" >
+                    <div class="item active">
+                        <img src="{{asset('bundles/haccodeee/images/front/pc-processeurs.jpg')}}" alt="Life style photo"/>
+                         <div class="carousel-content">
+                             <div class="car-descpt">
+                                 <span class="intro">DEEE (Déchets D'Equipements Electriques et Electroniques)<br/></span>
+                                    <span class="more">Entrprise spécialisé en traitement de déchets DEEE prodessionnels Disponoible à toute heure sur ses numéros de téléphones portables. Englobe tous les objets alimentés par des courants électriques ou électromagnétiques(fournis par des piles, des prises secteurs ou des batteries)</span>
+                                    <span class="customer"></span>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="{{asset('bundles/haccodeee/images/front/tout-compris-dechets-electroniques.jpg')}}" alt="Life style photo"/>
+                        <div class="carousel-content">
+                            <div class="car-descpt">
+                             <span>Une réponse rapide à votre demande<br/> Avoir un interlocuteur unique sur toute la france</span>
+                             <span class="more">Vous permet de réduire vos démarches. Nous prennons en charge votre demande: Recueil d'informations pour une bonne collecte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="{{asset('bundles/haccodeee/images/front/dechet-electronique-eparpiller.jpg')}}" alt="Life style photo"/>
+                        <div class="carousel-content">
+                            <div class="car-descpt">
+                             <span>Traitement des DEEE professionnels<br/> On vous assure un service de traitement et de dépollution de vos déchets par des acteurs </span>
+                             <span class="more">reconnus. Le recyclage des DEEE sont rigoureusement sélectionnés suivant des critères de qualité et leurs capacités à innover dans les procédés de recyclage. </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="{{asset('bundles/haccodeee/images/front/ecran-du-materiel-electronique_940x705.jpg')}}" alt="Life style photo"/>
+                        <div class="carousel-content">
+                             <div class="car-descpt">
+                             <span>La collecte DEEE professionnels<br/> On appelle en l’occurrence déchets professionnels</span>
+                             <span class="more">tous les déchets électriques et électroniques. produits par les entreprises, c’est-à-dire du matériel informatique, qui représente 90% des produits récupérés</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="{{asset('bundles/haccodeee/images/front/gestion-metal-ordures.jpg')}}" alt="Life style photo"/>
+                        <div class="carousel-content">
+                            <div class="car-descpt">
+                             <span>Des spécialistes sur votre site le jour de la collecte.<br/> Nos équipes sont qualifiées pour tout type</span>
+                             <span class="more">de stockageplacésen vrac au sous-sol à l’étage d’un immeuble ou dans un local annexe On organise le conditionnement de manière optimale, avec un pré-tri sur votre site. Une fois le vrac conditionné. Nous pourrons procéder à la collecte de vos DEEE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#featured" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#featured" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+     </div> <!-- caroussel end -->          
+{%endblock %}
+{% block body %}
+  
+{% endblock %}

@@ -1,0 +1,557 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800,800italic|Roboto+Slab:400,100,300,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+    font-family: "roboto slab",sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    position: relative;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "open sans","sans-serif";
+    font-weight: 100;
+    margin: 0;
+}
+body > header{
+    overflow: hidden;
+}
+header .navbar-default.inbody {
+    background: rgba(51, 139, 94, 0.5) none repeat scroll 0 0;
+}
+header .navbar.inbody {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+header .navbar.inbody .navbar-nav {
+    padding-top: 10px;
+}
+header .inbody .navbar-brand {
+    background-position: left top;
+    background-size: 43px auto;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+header .inbody .navbar-brand h1 {
+    font-size: 1.1em;
+    padding-left: 38px;
+}
+header .inbody .navbar-brand span.subhead {
+    display: none;
+}
+.carousel.fade {
+    opacity: 1;
+}
+.carousel .fade .item {
+    display: block;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.7s ease-out 0s;
+    width: 100%;
+}
+.carousel .fade .item:first-child {
+    opacity: 1;
+    position: relative;
+    top: auto;
+}
+.carousel .fade .item.active {
+    opacity: 1;
+}
+.carousel-control {
+    opacity: 0;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+}
+#featured .item {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+header .navbar {
+    padding: 30px 0;
+}
+header .navbar-default {
+    background: transparent none repeat scroll 0 0;
+    border: medium none;
+}
+header .navbar-default .navbar-nav a {
+    color:#F00;
+    font-weight: 800;
+    padding: 5px 8px;
+}
+header .navbar-default .navbar-nav a:hover {
+    color:#D0DC21;
+    font-weight: 800;
+}
+header .navbar-default .navbar-nav .active a {
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 4px solid #eec856;
+    color: #eec856;
+    font-weight: 700;
+}
+header .navbar-default .navbar-nav .active a:hover {
+    background: transparent none repeat scroll 0 0;
+    color: #e15d5f;
+    text-shadow: none;
+}
+header .navbar-brand {
+    background: rgba(0, 0, 0, 0) url("/bundles/haccodeee/images/front/headerlogo.png") no-repeat scroll 15px 0;
+    height: auto;
+}
+header .navbar-brand h1 {
+    color: white;
+    font-size: 1.8em;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 105px;
+}
+header .navbar-brand span.subhead {
+    display: block;
+    font-family: "roboto slab",serif;
+    font-size: 0.6em;
+    font-weight: 600;
+}
+header .navbar-toggle {
+    background: #279185 none repeat scroll 0 0;
+}
+header .navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+@media only screen and (max-width: 768px) {
+header .navbar-collapse.in {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+}
+
+footer {
+    background: #586d74 none repeat scroll 0 0;
+    color: white;
+    font-size: 0.8em;
+    padding: 20px 0 40px;
+}
+footer a {
+    color: #e0e6ae;
+}
+footer a:hover {
+    color: #eec586 !important;
+}
+footer .phone {
+    color: #e0e6ae;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+footer .navbar {
+    margin: 0;
+    padding: 0;
+}
+footer .navbar-default .navbar-nav > li > a {
+    color: #eec856 !important;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-decoration: underline;
+}
+footer .navbar-default .navbar-nav > li > a:hover {
+    cursor: pointer;
+}
+header .navbar {
+    padding: 30px 0;
+    transition: all 0.5s ease-out 0s;
+}
+footer .navbar-default {
+    background-color: transparent;
+    border: medium none;
+    margin-right: 40px;
+}
+
+
+
+
+/** Page **/
+
+.page{
+  /*padding:50px 0;*/
+}
+
+.page h2{
+ text-align:center;
+ margin-bottom:30px;
+}
+
+
+/* testimonials   */
+
+#testimonials h2{
+ display:none;
+}
+
+#testimonials blockquote{
+ padding:0;
+ margin:0;
+ border-left:none;
+ min-height:500px;
+ position:relative;
+}
+
+#testimonials blockquote .quote{
+  background-color:rgba(255,255,255,.6);
+  padding:25px 5%;
+  position:absolute;
+  bottom:0;
+  width:75%;
+  font-weight:400;
+  border-radius:0 50px 0 0;
+}
+
+#testimonials blockquote .quote:hover{
+  background-color:rgba(239,240,196,.9);
+}
+
+#testimonials #janeh {
+ background:url(/bundles/haccodeee/images/front/dechet-organiser.jpg) no-repeat center center;
+ background-size:cover;
+}
+
+#testimonials #mcphersons {
+ background:url(/bundles/haccodeee/images/front/cable-divers.jpg) no-repeat center center;
+ background-size:cover;
+}
+
+#testimonials #johnb {
+ background:url(/bundles/haccodeee/images/front/pc-carte-mere.jpg) no-repeat center center;
+ background-size:cover;
+}
+
+#testimonials #lorraines {
+ background:url(/bundles/haccodeee/images/front/transport-dechet-electrique.jpg) no-repeat center center;
+ background-size:cover;
+}
+
+#testimonials .quote{
+ font-size:1.2em;
+ line-height:110%;
+ font-weight:400;
+}
+
+#testimonials .quote .more, #testimonials  .customer{
+ opacity:0;
+ font-size:0;
+ padding-top:10px;
+}
+
+#testimonials .quote:hover .more{
+ font-family: "open sans", "sans-serif";
+ font-weight:100;
+ display:block;
+ opacity:1;
+ font-size:.8em;
+ line-height:120%;
+ 
+}
+
+#testimonials .quote:hover .customer{
+ display:block;
+ font-size:.7em;
+ text-align:right;
+ 
+}
+
+#testimonials .quote  .intro::after{
+  content:'...';
+}
+
+#testimonials .quote:hover  .intro::after{
+  content:'';
+}
+
+
+/* Caroussel content description */
+
+.carousel-content {
+  z-index: 20;
+  color:#586d74;
+  text-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+
+.carousel-content .car-descpt{
+  background-color:rgba(255,255,255,.8);
+  padding:25px 5%;
+  position:absolute;
+  bottom:30%;
+  right: 15%;
+  width:75%;
+  font-weight:400;
+  border-radius:50px 50px 50px 50px;
+}
+
+/* mobile device width<=360 */
+
+@media only screen and (max-width: 360px) {
+    .carousel-content {
+        z-index: 20;
+        color:#586d74;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+      }
+    
+    .carousel-content .car-descpt{
+        background-color:rgba(255,255,255,.8);
+        padding:15px 5%;
+        position:absolute;
+        top:15%;
+        bottom:10%;
+        right: 15%;
+        width:75%;
+        font-weight: bolder;
+        font-size:17px;
+        border-radius:50px 50px 50px 50px;
+      }
+    table#conf-tab tr td input[type=number]{
+        width: 60px;
+        text-align: center;
+    } 
+    
+    table#conf-tab tr th{
+        font-size:12px;
+        font-weight: bold;
+    } 
+    
+    form#signup p, form#signup label {
+        margin: 0px 0px 2px 0px;
+        font-size:12px;
+        font-weight: 100;
+    }
+}
+
+body #wrapper { 
+    font-size: 16px; 
+    font-family: 'Montserrat', sans-serif; background-color: #fff; 
+}
+
+form#signup{
+   /* max-width: 800px;*/
+    padding: 15px;
+    /*background: #2f392d;*/
+    background:rgba(47,57,45,.6);
+    overflow: hidden;
+}
+
+form#signup h2{
+    margin: 0px;
+    color:#fff;
+    font-size: 2em;
+}
+
+form#signup h3{
+    margin: -5px 0px 12px 0px;
+    color:#fff;
+    font-size: 1.2em;
+}
+
+form#signup h4{
+    margin: 15px 0px 3px 0px;
+    color:#fff;
+    font-size: 1em;
+}
+
+form#signup p, form#signup label{
+    margin: 0px 0px 6px 0px;
+    color:rgba(255,255,255,.8)
+}
+
+form#signup fieldset{
+    border:1px solid rgba(255,255,255,.4);
+    /*margin: 15px 0px 15px 20px;*/
+}
+
+form#signup legend{
+    color: #254581;
+    font-size: .9em;
+}
+
+form#signup textArea{
+    font-size: .9em;
+    padding: 5px;
+    border:none;
+    color:#264581;
+    background-color: rgba(255,255,255,.8);
+    width: 98%;
+}
+
+form#signup textarea:focus{
+    background-color:#fff;
+    
+}
+
+form#signup select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance: none;
+    font-size: .9em;
+    background: #588fd0 url(/bundles/haccodeee/images/front/icons_arrows.svg) no-repeat right 8px;
+    background-size: 30px 20px;
+    color:#ffd34c;
+    padding: 7px 45px 7px 10px;
+    border:1px solid #fff;
+ 
+}
+
+form#signup select::-ms-expand{
+    display: none;
+}
+
+form#signup input[type=checkbox], form#signup input[type=radio]{
+    width: 80px;
+    margin:0;
+    padding:0;
+    opacity: 0;
+}
+
+form#signup input[type=checkbox]+label,
+form#signup input[type=radio]+label{
+    display: inline-block;
+    margin-left: -20px;
+    padding:4px 0px 0px 27px;
+    background: url(/bundles/haccodeee/images/front/icons_check_radio.svg) no-repeat;
+    background-size: 20px 80px;
+    line-height: 16px;
+}
+
+form#signup input[type=checkbox]+label{
+    background-position: 0px 0px;
+}
+
+form#signup input[type=radio]+label{
+    background-position: 0px -40px;
+}
+
+form#signup input:checked+label{
+    color:#ffd34c;
+}
+
+form#signup input[type=checkbox]:checked+label{
+    background-position: 0px -20px;
+}
+
+form#signup input[type=radio]:checked+label{
+    background-position:0px -60px;
+}
+
+form#signup input#email{
+    font-size: .9em;
+    background: rgba(255,255,255,.8) url(/bundles/haccodeee/images/front/icon_email.svg) no-repeat 7px 6px;
+    background-size:30px 17px;
+    padding: 5px 0px 6px 47px;
+    margin:0px 0px 12px 0px;
+    border: none;
+    color:#264581;
+    width: 80%;
+    
+}
+
+form#signup input#email:focus{
+  background-color: #fff;
+}
+
+form#signup input[type=submit]{
+    font-size: .9em;
+    color:#fff;
+    border:none;
+    background-color: #264581;
+    margin:10px 0px 5px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+
+form#signup input[type=submit]:hover{
+    color:#ffd34c;
+}
+
+.custome-legend-header{
+    background: #2b0601 url(/bundles/haccodeee/images/front/fielset-h3.gif) repeat-x left top;
+    margin:auto;
+    padding: 4px 0px 7px 20px;
+}
+
+.custome-legend-header h3{
+    color:#f95309;
+    font-size: 1.2em;
+    font-weight: lighter;
+    line-height: 1.5em;
+}
+
+/*Devis show page */
+
+.btn-submt-form{
+  float: right;
+  margin:0px 0px 10px 10px;
+}
+
+.aline_left{
+    display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+table{
+    margin-top: 10px;  
+}
+
+table#conf-tab tr th{
+    border: 1px #66AACC solid;
+    text-align:center;
+}
+
+table#recap-table tr th{
+    border: 1px #66AACC solid;
+}
+
+table#recap-table tr td{
+    border: 1px #66AACC solid;
+    text-align:center;
+}
+
+table tr {
+  
+}
+
+table#conf-tab tr td{
+    border-collapse:initial;
+    border: 1px #66AACC solid;
+}
+
+table#conf-tab tr td input[type=number]{
+    width: 80px;
+    text-align: center;
+}
+
+/* Formatage pied de page   */
+
+#entetepage{
+  padding-bottom: 30px;
+  padding-top: 10px;
+  text-align: center;  
+}
+
+#pied-page{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+

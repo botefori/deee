@@ -1,0 +1,178 @@
+{% extends '::front/front.html.twig' %}
+{% form_theme form _self %}
+
+{% block submit_widget %}
+    <div class="submit_widget btn-submt-form">
+         <button type="submit" class="btn btn-success">Faire le devis</button>
+    </div>
+{% endblock%}
+{% block title %}{{parent()}} DevisSetup creation {% endblock %}
+{%block carsl %}
+{%endblock %}
+{% block body -%}
+    <div id="wrapper">
+    {#{dump(form.materiels.vars.choices)}#}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                {{form_start(form,{'attr':{'class': 'form_verticale','id':'signup'}})}}
+                    <fieldset>
+                         <div class="custome-legend-header">
+                           <h3>Details de votre devis</h3>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table id="conf-tab" class="table">
+                                        <tbody>
+                                        <tr>
+                                            <th>Liste du matériels à recycler</th>
+                                            <th>Quantité</th>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.uc,"Unité centrale")}}</td>
+                                            <td>{{form_widget(form.uc)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.ecran15a17pouces,"Ecran de 15 à 17 pouces")}}</td>
+                                            <td>{{form_widget(form.ecran15a17pouces)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.ecran19a21pouces,"Ecran de 19 à 21 pouces")}}</td>
+                                            <td>{{form_widget(form.ecran19a21pouces)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.ordinateurportable,"Ordinateur portable")}}</td>
+                                            <td>{{form_widget(form.ordinateurportable)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.phoneportable,"Phone portable")}}</td>
+                                            <td>{{form_widget(form.phoneportable)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.imprimante,"Imprimante")}}</td>
+                                            <td>{{form_widget(form.imprimante)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.serveurs,"Serveurs")}}</td>
+                                            <td>{{form_widget(form.serveurs)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.photocopieurmoins70kg,"Photocopieur moins de 70kg")}}</td>
+                                            <td>{{form_widget(form.photocopieurmoins70kg)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.photocopieurplus70kg,"Photocopieur plus de 70kg")}}</td>
+                                            <td>{{form_widget(form.photocopieurplus70kg)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.onduleurs,"Onduleurs")}}</td>
+                                            <td>{{form_widget(form.onduleurs)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.peripheriques,"Périphériques")}}</td>
+                                            <td>{{form_widget(form.peripheriques)}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{form_label(form.piecesdetacheespoids,"Pièces détachées")}}</td>
+                                            <td>{{form_widget(form.piecesdetacheespoids)}}</td>
+                                        </tr>
+                                    </tbody>
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {{form_label(form.autresproduitsapreciser,"Autres à (préciser)")}}
+                                        <div class="controls">
+                                        {{form_widget(form.autresproduitsapreciser)}}
+                                     </div>
+                                    </div>
+                                    {#{form_row(form.devSetups.projectTypes)}#}
+                                </div>
+                                 <br>
+                            </div>
+                        </div>
+                    
+                    </fieldset>
+                    <fieldset>
+                        <div class="custome-legend-header">
+                            <h3>Vos informations clients</h3>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <br>
+                                    <div class="form-group">
+                                     {{form_label(form.customer.contact,"Contact")}}
+                                     <div class="controls">
+                                     {{form_widget(form.customer.contact)}}
+                                     </div>
+                                    </div>
+                                   <div class="form-group">
+                                    {{form_label(form.customer.address,"Address")}}
+                                    <div class="controls">
+                                    {{form_widget(form.customer.address)}}
+                                    </div>
+                                   </div>
+                                   <div class="form-group">
+                                    {{form_label(form.customer.company,"company")}}
+                                    <div class="controls">
+                                    {{form_widget(form.customer.company)}}
+                                    </div>
+                                   </div>
+                                   
+                                   <div class="form-group">
+                                    {{form_label(form.customer.phone, "Phone")}}
+                                    <div class="controls">
+                                    {{form_widget(form.customer.phone)}}
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <br>
+                                    <div class="form-group">
+                                     {{form_label(form.customer.postalCode, "Code Postale")}}
+                                     <div class="controls">
+                                     {{form_widget(form.customer.postalCode)}}
+                                     </div>
+                                    </div>
+                                    <div class="form-group">
+                                     {{form_label(form.customer.city, "Ville")}}
+                                     <div class="controls">
+                                     {{form_widget(form.customer.city)}}
+                                     </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                     {{form_label(form.customer.email, "Email")}}
+                                     <div class="controls">
+                                     {{form_widget(form.customer.email)}}
+                                     </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                          {{form_label(form.customer.message, "Message")}}
+                                          <div class="controls">
+                                          {{form_widget(form.customer.message)}}
+                                          </div>
+                                     </div>        
+                                </div>
+                            </div>
+                    </fieldset>
+                {{form_end(form)}}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}   
+    
+   
+   

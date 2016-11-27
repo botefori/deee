@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Admin : {% endblock %}</title>
+        {% block stylesheets %}
+            {%stylesheets filter='cssrewrite'
+               '%Kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.css'
+               '%Kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap-theme.css'
+               '@HaccoDeeeBundle/Resources/public/css/admin/custom-admin.css'
+             %}
+             <link rel="stylesheet" href="{{asset_url}}" type="text/css"/>
+             {%endstylesheets%}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="container">
+         {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}
+            {%javascripts
+               '%Kernel.root_dir%/../vendor/components/jquery/jquery.js'
+               '%Kernel.root_dir%/../vendor/twbs/bootstrap/dist/js/bootstrap.js'
+            %}
+             <script scr="{{asset_url}}"></script>
+            {%endjavascripts %}
+        {% endblock %}
+    </body>
+</html>

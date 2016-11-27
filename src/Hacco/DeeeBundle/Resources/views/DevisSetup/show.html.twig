@@ -1,0 +1,124 @@
+{% extends '::front/front.html.twig' %}
+
+{% block title %}{{parent()}} Envoie mail {% endblock %}
+{%block carsl %}
+{%endblock %}
+{% block body -%}
+<div id="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <table id="recap-table" class="table">
+                    <tbody>
+                        <tr>
+                            <th>{{ entity.customer.company }}</th>
+                        </tr>
+                        <tr>
+                            <th>{{ entity.customer.contact }}</th>
+                        </tr>
+                        <tr>
+                            <th>{{ entity.customer.city }}</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="col-md-3 col-md-offset-6">
+                <table id="recap-table" class="table">
+                    <tbody>
+                        <tr>
+                            <th>{{ entity.customer.phone }}</th>
+                        </tr>
+                        <tr>
+                            <th>{{ entity.customer.email }}</th>
+                        </tr>
+                        <tr>
+                            <th>{{ entity.customer.postalCode }}</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+               
+                <table id="recap-table" class="table">
+                    <tbody>
+                        <tr>
+                            <th>Unité centrale</th>
+                            <td>{{ entity.uc }}</td>
+                        </tr>
+                        <tr>
+                            <th>Ecran de 15 à 17 pouces</th>
+                            <td>{{ entity.ecran15a17pouces }}</td>
+                        </tr>
+                        <tr>
+                            <th>Ecran de 19 à 21 pouces</th>
+                            <td>{{ entity.ecran19a21pouces }}</td>
+                        </tr>
+                        <tr>
+                            <th>Ordinateur portable</th>
+                            <td>{{ entity.ordinateurportable }}</td>
+                        </tr>
+                        <tr>
+                            <th>Phone portable</th>
+                            <td>{{ entity.phoneportable }}</td>
+                        </tr>
+                        <tr>
+                            <th>Photocopieur moins de 70kg</th>
+                            <td>{{ entity.photocopieurmoins70kg }}</td>
+                        </tr>
+                        <tr>
+                            <th>Photocopieur plus de 70kg</th>
+                            <td>{{ entity.photocopieurplus70kg }}</td>
+                        </tr>
+                        <tr>
+                            <th>Imprimante</th>
+                            <td>{{ entity.imprimante }}</td>
+                        </tr>
+                        <tr>
+                            <th>Serveurs</th>
+                            <td>{{ entity.serveurs }}</td>
+                        </tr>
+                        <tr>
+                            <th>Onduleurs</th>
+                            <td>{{ entity.onduleurs }}</td>
+                        </tr>
+                        <tr>
+                            <th>Peripheriques</th>
+                            <td>{{ entity.peripheriques }}</td>
+                        </tr>
+                        <tr>
+                            <th>Pièces détachées</th>
+                            <td>{{ entity.piecesdetacheespoids }}</td>
+                        </tr>
+     
+                        <tr>
+                            <th>Autres à (préciser)</th>
+                            <td>{{ entity.autresproduitsapreciser }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+
+                    <div class="btn-submt-form">
+                        <a href="{{ path('devissetup_edit', { 'id': entity.id }) }}" class="btn btn-success aline_left">
+                          Modifier
+                        </a>
+                        <a href="{{ path('devissetup_pdf', { 'id': entity.id }) }}" class="btn btn-success aline_left">
+                           votre devis en pdf
+                        </a>
+                    </div>
+                                  
+                    <div class="aline_left">
+                       {#{ form(delete_form) }#}
+                    </div>
+                </div>
+                   
+           </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

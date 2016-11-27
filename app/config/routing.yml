@@ -1,0 +1,12 @@
+hacco_deee:
+    resource: "@HaccoDeeeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
+
+homepage:
+    pattern: /
+    defaults: {_controller:HaccoDeeeBundle:Home:index}

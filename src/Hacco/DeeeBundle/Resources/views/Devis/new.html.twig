@@ -1,0 +1,118 @@
+{% extends '::Front/front.html.twig' %}
+{% form_theme form _self %}
+
+{% block submit_widget %}
+    <div class="submit_widget btn-submt-form">
+         <button type="submit" class="btn btn-success">Faire le devis</button>
+    </div>
+{% endblock%}
+{% block title %}{{parent()}} About us {% endblock %}
+{%block carsl %}
+{%endblock %}
+{% block body -%}
+<div id="wrapper">
+    {#{dump(form.materiels.vars.choices)}#}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                {{form_start(form,{'attr':{'class': 'form_verticale','id':'signup'}})}}
+                    <fieldset>
+                         <div class="custome-legend-header">
+                           <h3>Votre projets</h3>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <h4>Matériels à recycler</h4>
+                                     <br>
+                                    {% for matiere in form.materiels %}
+                                        {{form_label(matiere)}}
+                                        <br>
+                                    {%endfor %}
+                                    {% do form.materiels.setRendered %}
+                                </div>
+                                <div class="col-md-5">
+                                     {% for matiere in form.devismaterielsDevis %}
+                                        {{form_label(matiere)}}
+                                        {{form_widget(matieret)}}
+                                    {%endfor %}
+                                    {#{form_row(form.devSetups.projectTypes)}#}
+                                </div>
+                                 <br>
+                            </div>
+                        </div>
+                    
+                    </fieldset>
+                    <fieldset>
+                        <div class="custome-legend-header">
+                            <h3>Vos informations</h3>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <br>
+                                    <div class="form-group">
+                                     {{form_label(form.customer.contact,"Contact")}}
+                                     <div class="controls">
+                                     {{form_widget(form.customer.contact)}}
+                                     </div>
+                                    </div>
+                                   <div class="form-group">
+                                    {{form_label(form.customer.address,"Address")}}
+                                    <div class="controls">
+                                    {{form_widget(form.customer.address)}}
+                                    </div>
+                                   </div>
+                                   <div class="form-group">
+                                    {{form_label(form.customer.company,"company")}}
+                                    <div class="controls">
+                                    {{form_widget(form.customer.company)}}
+                                    </div>
+                                   </div>
+                                   
+                                   <div class="form-group">
+                                    {{form_label(form.customer.phone, "Phone")}}
+                                    <div class="controls">
+                                    {{form_widget(form.customer.phone)}}
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <br>
+                                    <div class="form-group">
+                                     {{form_label(form.customer.postalCode, "Code Postale")}}
+                                     <div class="controls">
+                                     {{form_widget(form.customer.postalCode)}}
+                                     </div>
+                                    </div>
+                                    <div class="form-group">
+                                     {{form_label(form.customer.city, "Ville")}}
+                                     <div class="controls">
+                                     {{form_widget(form.customer.city)}}
+                                     </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                     {{form_label(form.customer.email, "Email")}}
+                                     <div class="controls">
+                                     {{form_widget(form.customer.email)}}
+                                     </div>
+                                    </div>
+                                     
+                                    <div class="form-group">
+                                     {{form_label(form.customer.message, "Message")}}
+                                     <div class="controls">
+                                     {{form_widget(form.customer.message)}}
+                                     </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                {{form_end(form)}}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

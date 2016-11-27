@@ -1,0 +1,51 @@
+{% extends '::Front/front.html.twig' %}
+{% block title %}{{parent()}} Accueil {% endblock %}
+{%block carsl %}
+      <div class="carousel fade" data-ride="caroussel" id="featured"> <!-- caroussel star -->
+                <ol class="carousel-indicators"> 
+                </ol> <!-- slider indicator end --> 
+
+                <div class="carousel-inner fullheight" >
+                    <div class="item active">
+                        <img src="{{asset('bundles/haccodeee/images/front/Hollywood_FL_UPHOLSTERY_CLEANING_015.jpg')}}" alt="Life style photo"/>
+                         <div class="carousel-content">
+                             <p>Votre solution de nettoyage pour vous accompagner<br/> dans la proprété de vos instalations</p>
+                         </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="{{asset('bundles/haccodeee/images/front/Floor-Cleaning.jpg')}}" alt="Life style photo"/>
+                        <div class="carousel-content">
+                             <p>Votre solution de nettoyage pour vous accompagner<br/> dans la proprété de vos instalations</p>
+                         </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="{{asset('bundles/haccodeee/images/front/Commercial-cleaning-in-Bristol.jpg')}}" alt="Life style photo"/>
+                        <div class="carousel-content">
+                             <p>Votre solution de nettoyage pour vous accompagner<br/> dans la proprété de vos instalations</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="{{asset('bundles/haccodeee/images/front/commercial-cleaning-1.jpg')}}" alt="Life style photo"/>
+                        <div class="carousel-content">
+                             <p>Votre solution de nettoyage pour vous accompagner<br/> dans la proprété de vos instalations</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="{{asset('bundles/haccodeee/images/front/house-cleaning.jpg')}}" alt="Life style photo"/>
+                        <div class="carousel-content">
+                             <p>Votre solution de nettoyage pour vous accompagner<br/> dans la proprété de vos instalations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#featured" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#featured" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+     </div> <!-- caroussel end -->          
+{%endblock %}
+{% block body %}
+  
+{% endblock %}

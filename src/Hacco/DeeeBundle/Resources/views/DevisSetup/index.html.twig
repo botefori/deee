@@ -1,0 +1,65 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>DevisSetup list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Uc</th>
+                <th>Ecran15a17pouces</th>
+                <th>Ecran19a21pouces</th>
+                <th>Ordinateurportable</th>
+                <th>Phoneportable</th>
+                <th>Photocopieurmoins70kg</th>
+                <th>Photocopieurplus70kg</th>
+                <th>Imprimante</th>
+                <th>Serveurs</th>
+                <th>Onduleurs</th>
+                <th>Peripheriques</th>
+                <th>Piecesdetacheespoids</th>
+                <th>Autresproduitsapreciser</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('devissetup_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.uc }}</td>
+                <td>{{ entity.ecran15a17pouces }}</td>
+                <td>{{ entity.ecran19a21pouces }}</td>
+                <td>{{ entity.ordinateurportable }}</td>
+                <td>{{ entity.phoneportable }}</td>
+                <td>{{ entity.photocopieurmoins70kg }}</td>
+                <td>{{ entity.photocopieurplus70kg }}</td>
+                <td>{{ entity.imprimante }}</td>
+                <td>{{ entity.serveurs }}</td>
+                <td>{{ entity.onduleurs }}</td>
+                <td>{{ entity.peripheriques }}</td>
+                <td>{{ entity.piecesdetacheespoids }}</td>
+                <td>{{ entity.autresproduitsapreciser }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('devissetup_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('devissetup_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('devissetup_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}
